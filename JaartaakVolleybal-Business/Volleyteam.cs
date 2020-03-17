@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace JaartaakVolleybal_Business
 {
-    public class Class1
+    public class Volleyteam
     {
     }
 }

@@ -13,7 +13,7 @@ namespace JaartaakVolleybal_Business
         public Competitie()
         {
             _match = new List<Match>();
-            _team = new List<Team>();
+            _team = new List<Team>(); 
         }
 
         public List<Match> Match

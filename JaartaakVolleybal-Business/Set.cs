@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace JaartaakVolleybal_Business
 {
-     public class Sets
+     public class Set
     {
         private int _puntenHome; // de punten van het team dat thuis speelt
         private int _puntenBezoek; // de punten van het team dat op bezoek komt
 
-        public Sets(int puntenHome, int puntenBezoek)
+        public Set(int puntenHome, int puntenBezoek)
         {
            _puntenHome = puntenHome;
-            _puntenBezoek = puntenBezoek;
+           _puntenBezoek = puntenBezoek;
         }
 
         public int PuntenHome
@@ -27,15 +27,18 @@ namespace JaartaakVolleybal_Business
             get { return _puntenBezoek; }
         }
 
-        public void voegPuntenHomeToe(Set punten)
+        public void voegPuntenHomeToe(int punten)
         {
-            _puntenHome.Add(punten);
+            _puntenHome = punten;  // je voegt gewoon de punten van een set toe bv. 25
         }
 
-        public void voegPuntenBezoekToe(Set punten)
+        public void voegPuntenBezoekToe(int punten)
         {
-            _puntenBezoek.Add(punten);
+            _puntenBezoek = punten;
         }
+
+        // de methode wisselScore() hoef je niet te doen. 
+
     }
 }
-}
+

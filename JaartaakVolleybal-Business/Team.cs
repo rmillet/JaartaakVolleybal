@@ -49,7 +49,12 @@ namespace JaartaakVolleybal_Business
         public int AantalMatchen
         {
             get { return _aantalMatchen; }
+            set { _aantalMatchen = value; } // je moet het aantal matchen kunnen aanpassen
         }
+        //dus ook voor de rest!!!
+        //je moet telkens ook kunnen aanpassen
+        //dus overal sets
+
         public int GewonnenSets
         {
             get { return _gewonnenSets; }

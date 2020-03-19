@@ -8,41 +8,47 @@ namespace JaartaakVolleybal_Business
 {
       public class Competitie
     {
-        private List<Match> _match;
-        private List<Team> _team;
+        private List<Match> _matchen; //gebruik beter meervoud is een lijst 
+        private List<Team> _teams;
         public Competitie()
         {
-            _match = new List<Match>();
-            _team = new List<Team>(); 
+            _matchen = new List<Match>();
+            _teams = new List<Team>(); 
         }
 
         public List<Match> Match
         {
-            get { return _match; }
+            get { return _matchen; }
         }
 
         public List<Team> Team
         {
-            get { return _team; }
+            get { return _teams; }
         }
 
-        public void voegTeamToe(Team teams)
+        public void voegTeamToe(Team team)
+        {
+            _teams.Add(team);
+        }
+
+        public void voegMatchToe(Match match) // je voegt 1 match toe aan een lijst matchen
+        {
+            _matchen.Add(match);
+        }
+
+        // dit heb je niet nodig
+        /*public void vraagMatchOp(Team teams)
         {
             _team.Add(teams);
-        }
+        }*/
 
-        public void voegMatchToe(Match matchen)
+        public Team vraagTeamOp (string naam) // je vraagt een team op basis van de naam
         {
-            _match.Add(matchen);
-        }
-
-        public void vraagMatchOp(Team teams)
-        {
-            _team.Add(teams);
-        }
-
-        public Team vraagTeamO(int nr)
-        {
+            Team temp = null;
+            // dus dit is niet correct... 
+            //je moet dus op zoak gaan nar het team met de naam 
+            // die je hebt megegeven als parameter
+            /*
             if (nr >= 0 && nr < hoeveelingredienten())
             {
                 return _team[nr];
@@ -51,31 +57,12 @@ namespace JaartaakVolleybal_Business
             {
                 return null;
             }
-        }
-        public string vraagTeamOp(int nr)
-        {
-            if (nr >= 0 && nr < _team.Count)
-            {
-                return _team[nr].Naam;
-            }
-            else
-            {
-                return " ";
-            }
+            */
+            return temp;
         }
 
-        public string vraagMatchOp(int nr)
-        {
-            if (nr >= 0 && nr < _match.Count)
-            {
-                return _team[nr].Naam;
-            }
-            else
-            {
-                return " ";
-            }
-        }
+        
 
     }
 }
-}
+

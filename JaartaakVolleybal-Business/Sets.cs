@@ -15,6 +15,7 @@ namespace JaartaakVolleybal_Business
         {
            _puntenHome = puntenHome;
             _puntenBezoek = puntenBezoek;
+       
         }
 
         public int PuntenHome

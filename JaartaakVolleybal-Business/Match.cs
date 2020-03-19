@@ -52,6 +52,7 @@ namespace JaartaakVolleybal_Business
         public void voegTeamHomeToe(Team teams)
         {
             _teamHome.Add(teams);
+
         }
 
         public void voegSetToe(Set sets)

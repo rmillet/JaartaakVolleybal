@@ -9,5 +9,6 @@ namespace JaartaakVolleybal_Business
     public class Volleyteam
     {
         private int getal;
+        private int getal2;
     }
 }

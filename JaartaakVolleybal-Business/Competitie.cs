@@ -8,10 +8,12 @@ namespace JaartaakVolleybal_Business
 {
       public class Competitie
     {
+        private List<Match> _match;
+        private List<Team> _team;
         public Competitie()
         {
             _match = new List<Match>();
-            _team = new List<Volleyteam>();
+            _team = new List<Team>();
         }
 
         public List<Match> Match

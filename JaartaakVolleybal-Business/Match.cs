@@ -45,7 +45,7 @@ namespace JaartaakVolleybal_Business
         }
 
         public int GewonnenSetsH
-        {
+        { 
             get { return _gewonnenSetsH; }
         }
 

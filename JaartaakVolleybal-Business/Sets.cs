@@ -13,7 +13,7 @@ namespace JaartaakVolleybal_Business
 
         public Sets(int puntenHome, int puntenBezoek)
         {
-            _puntenHome = puntenHome;
+           _puntenHome = puntenHome;
             _puntenBezoek = puntenBezoek;
         }
 

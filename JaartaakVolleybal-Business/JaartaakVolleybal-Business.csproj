@@ -46,7 +46,6 @@
     <Compile Include="Match.cs" />
     <Compile Include="Sets.cs" />
     <Compile Include="Team.cs" />
-    <Compile Include="Volleyteam.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

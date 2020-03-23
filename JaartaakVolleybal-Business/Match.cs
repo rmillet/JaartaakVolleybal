@@ -66,7 +66,7 @@ namespace JaartaakVolleybal_Business
         {
             _score.Add(sets);
             //Maar ook bij elke ploeg het aantal sets gewonnen aanpassen, aantal verloren
-            // en dit bij de bezkers als bij de hometeam
+            // en dit bij de bezoekers als bij de hometeam
             //daarom dat je bij team overal GET en SET moet hebben
 
 

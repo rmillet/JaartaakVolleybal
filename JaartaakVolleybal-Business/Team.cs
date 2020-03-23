@@ -58,14 +58,15 @@ namespace JaartaakVolleybal_Business
         public int GewonnenSets
         {
             get { return _gewonnenSets; }
+            set { _gewonnenSets = value; } // je moet het aantal gewonnen sets kunnen aanpassen
         }
         public int AantalSets
         {
             get { return _aantalSets; }
+            set { _aantalSets = value; } // je moet het aantal sets kunnen aanpassen
         }
         public int berekenPunten()
         {
-
         }
         
         //override van ToString

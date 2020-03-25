@@ -68,6 +68,9 @@ namespace JaartaakVolleybal_Business
         }
         public int berekenPunten()
         {
+            int totaal =  ...;
+
+            return totaal;
         }
         
         //override van ToString

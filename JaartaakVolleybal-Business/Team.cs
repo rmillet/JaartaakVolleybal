@@ -64,6 +64,7 @@ namespace JaartaakVolleybal_Business
         {
             get { return _aantalSets; }
             set { _aantalSets = value; } // je moet het aantal sets kunnen aanpassen
+            //Glenn
         }
         public int berekenPunten()
         {

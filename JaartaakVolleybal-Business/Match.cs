@@ -64,7 +64,7 @@ namespace JaartaakVolleybal_Business
 
         public void voegSetToe(Set sets)
         {
-            
+            // terug aanpassen
 
 
         }

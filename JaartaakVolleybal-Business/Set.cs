@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace JaartaakVolleybal_Business
 {
      public class Set
-    {
+    { // deze is klaar
         private int _puntenHome; // de punten van het team dat thuis speelt
         private int _puntenBezoek; // de punten van het team dat op bezoek komt
 

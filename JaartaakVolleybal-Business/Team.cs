@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace JaartaakVolleybal_Business
 {
      public class Team
-    {
+    { // kdenk deze klaar ma ik weet niet of berekenpunten juist is 
         private string _naam; // naam van het team
         private int _matchGewonnen; // matchen die het team gewonnen geeft
         private int _matchVerloren; // matchen die team verloren geeft
@@ -67,8 +67,11 @@ namespace JaartaakVolleybal_Business
             //Glenn
         }
         public int berekenPunten()
-        {
-            int totaal =  ...;
+        {   // ik denk dat we zoiets moeten doen Match gewonnen als je 3 sets wint.
+            // set win je als je 25 punten hebt met 2 punten verschil
+            //Als je match met 3-0 of 3-1 wint krijg je 3 punten , Als je met 3-2 wint dan krijg je 2 punten
+            // als je match verliest met 0-3 of 1-3 dan krijg je 0 punten als je verliest met 2-3 krijg je 1 punt
+            int totaal = _gewonnenSets-_matchGewonnen;
 
             return totaal;
         }

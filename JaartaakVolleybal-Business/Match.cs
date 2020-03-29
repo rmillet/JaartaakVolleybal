@@ -69,7 +69,19 @@ namespace JaartaakVolleybal_Business
             // en dit bij de bezoekers als bij de hometeam
             //daarom dat je bij team overal GET en SET moet hebben
 
-
+           if(_gewonnenSetsH==3)
+            {
+                _teamHome.GewonnenSets++;
+                _teamBezoek.MatchVerloren++;
+                _teamHome.MatchGewonnen++;
+             }
+           if( _gewonnenSetsB==3)
+            {
+                _teamBezoek.GewonnenSets++;
+                _teamHome.MatchVerloren++;
+                _teamBezoek.MatchGewonnen++;
+            }
+            
             checkWinner();
         }
 
@@ -79,9 +91,19 @@ namespace JaartaakVolleybal_Business
             //hier ga je moeten checken wie gewonnen heeft of niet
             // maw het aantal gewonnen wedstrijden moet aangepast worden ed.
 
+
             //hier kan je dan die gameover op true or false zetten
 
-        }
+            if (GewonnenSetsB == 3 or GewonnensetsH==3)
+            {
+                _gameOver = true;
+            } 
+            else
+            {
+                _gameOver = false;
+            }
+           
+        }   
 
      }
 }

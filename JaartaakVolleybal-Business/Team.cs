@@ -73,7 +73,7 @@ namespace JaartaakVolleybal_Business
             // als je match verliest met 0-3 of 1-3 dan krijg je 0 punten als je verliest met 2-3 krijg je 1 punt
             int totaal = _gewonnenSets-_matchGewonnen;
 
-            return totaal;
+            return totaal; 
         }
         
         //override van ToString

@@ -64,7 +64,24 @@ namespace JaartaakVolleybal_Business
 
         public void voegSetToe(Set sets)
         {
-            // terug aanpassen
+            if (_gameOver = false)
+            {
+                if (sets.setPuntenHome > sets.setPuntenBezoekers)
+                {
+                    _teamHome.GewonnenSets++;
+                    _teamBezoek.VerlorenSets++;
+
+                    _gewonnenSetsH++;
+                }
+                else
+                {
+                    _teamHome.VerlorenSets++;
+                    _teamBezoek.GewonnenSets++;
+
+
+                    _gewonnenSetsB++;
+                }
+            }
 
 
         }
@@ -72,10 +89,23 @@ namespace JaartaakVolleybal_Business
         //hulpprocedure om te controleren of de match voorbij is. Wordt aangeroepen na het toevoegen van een set
         private void checkWinner()
         {
-            //hier ga je moeten checken wie gewonnen heeft of niet
-            // maw het aantal gewonnen wedstrijden moet aangepast worden ed.
-
-            //hier kan je dan die gameover op true or false zetten
+            if (_gewonnenSetsH == 3)
+            {
+                _teamHome.MatchGewonnen++;
+                _teamBezoek.MatchVerloren++;
+                _gameOver = true; //dit betekent dat de match gespeeld is en dit dus de definitieve resultaten zijn.
+                _teamHome.AantalMatchen++;
+                _teamBezoek.AantalMatchen++;
+            }
+            
+            if (_gewonnenSetsB == 3)
+            {
+                _teamHome.MatchVerloren++;
+                _teamBezoek.MatchGewonnen++;
+                _gameOver = true; //de match is over en dit zijn de resultaten
+                _teamHome.AantalMatchen++;
+                _teamBezoek.AantalMatchen++;
+            }
 
         }
 

@@ -12,7 +12,8 @@ namespace JaartaakVolleybal_Business
         private int _matchGewonnen; // matchen die het team gewonnen geeft
         private int _matchVerloren; // matchen die team verloren geeft
         private int _aantalMatchen; // het aantal matchen team al geeft gespeeld
-        private int _gewonnenSets; // aantal sets team geeft gewonnen
+        private int _gewonnenSets; // aantal sets team heeft gewonnen
+        private int _verlorenSets; // aantal sets team heeft verloren
         private int _aantalSets; // aantal gespeelde sets 
 
         public Team(string naam)
@@ -22,6 +23,7 @@ namespace JaartaakVolleybal_Business
             _matchVerloren = 0;
             _aantalMatchen = 0;
             _gewonnenSets = 0;
+            _verlorenSets = 0;
             _aantalSets = 0;
         }
         public Team()
@@ -31,6 +33,7 @@ namespace JaartaakVolleybal_Business
             _matchVerloren = 0;
             _aantalMatchen = 0;
             _gewonnenSets = 0;
+            _verlorenSets = 0;
             _aantalSets = 0;
         }
         public string Naam
@@ -41,10 +44,12 @@ namespace JaartaakVolleybal_Business
         public int MatchGewonnen
         {
             get { return _matchGewonnen; }
+            set { _matchGewonnen = value; }
         }
         public int MatchVerloren
         {
             get { return _matchVerloren; }
+            set { _matchVerloren = value; }
         }
         public int AantalMatchen
         {
@@ -59,6 +64,11 @@ namespace JaartaakVolleybal_Business
         {
             get { return _gewonnenSets; }
             set { _gewonnenSets = value; } // je moet het aantal gewonnen sets kunnen aanpassen
+        }
+        public int VerlorenSets
+        {
+            get { return _verlorenSets; }
+            set { _verlorenSets = value; } // je moet het aantal verloren sets kunnen aanpassen.
         }
         public int AantalSets
         {

@@ -64,17 +64,13 @@ namespace JaartaakVolleybal_Business
 
         public void voegSetToe(Set sets)
         {
-            _score.Add(sets);
-            //Maar ook bij elke ploeg het aantal sets gewonnen aanpassen, aantal verloren
-            // en dit bij de bezoekers als bij de hometeam
-            //daarom dat je bij team overal GET en SET moet hebben
+            
 
 
-            checkWinner();
         }
 
         //hulpprocedure om te controleren of de match voorbij is. Wordt aangeroepen na het toevoegen van een set
-            private void checkWinner()
+        private void checkWinner()
         {
             //hier ga je moeten checken wie gewonnen heeft of niet
             // maw het aantal gewonnen wedstrijden moet aangepast worden ed.

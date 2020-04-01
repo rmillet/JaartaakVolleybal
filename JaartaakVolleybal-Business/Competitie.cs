@@ -51,7 +51,7 @@ namespace JaartaakVolleybal_Business
             // die je hebt megegeven als parameter
             //
             foreach ( Team temp2 in _teams)
-            {
+            {//Glenn
 
                 if (temp2.Naam == naam)
                 {

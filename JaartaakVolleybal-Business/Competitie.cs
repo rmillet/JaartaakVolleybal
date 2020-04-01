@@ -50,26 +50,15 @@ namespace JaartaakVolleybal_Business
             //je moet dus op zoak gaan nar het team met de naam 
             // die je hebt megegeven als parameter
             //
-            foreach ( Team temp2 in _teams)
-            {//Glenn
-
-                if (temp2.Naam == naam)
-                {
-                    // temp.Add(temp);
-                    resultaatteam = ...;
-                }
-
-            }
-            // dit misschien
-           /* for (int i = _teams.Count - 1; i >= 0; i--)
+            for (int i = _teams.Count - 1; i >= 0; i--)
             {
-                if (temp2.Naam == naam)
+               if (Team == naam)
                 {
                     // temp.Add(temp);
                     resultaatteam = ...;
                 }
 
-            } */
+            } 
             return resultaatteam;
             
         }       

@@ -75,13 +75,18 @@ namespace JaartaakVolleybal_Business
         {
             get { return _aantalSets; }
             set { _aantalSets = value; } // je moet het aantal sets kunnen aanpassen
-            //Glenn
+            
         }
 
         // eigenschap punten toevoegen
+        public int puntenToevoegen
+        {
+            get { return punten; }
+            set { punten = value; }
+        }
 
         
-        //dit mag dan weg
+        
 
         public int berekenPunten()
         {   // ik denk dat we zoiets moeten doen Match gewonnen als je 3 sets wint.

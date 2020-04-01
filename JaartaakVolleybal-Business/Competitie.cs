@@ -60,6 +60,16 @@ namespace JaartaakVolleybal_Business
                 }
 
             }
+            // dit misschien
+           /* for (int i = _teams.Count - 1; i >= 0; i--)
+            {
+                if (temp2.Naam == naam)
+                {
+                    // temp.Add(temp);
+                    resultaatteam = ...;
+                }
+
+            } */
             return resultaatteam;
             
         }       

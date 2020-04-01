@@ -52,10 +52,10 @@ namespace JaartaakVolleybal_Business
             //
             for (int i = _teams.Count - 1; i >= 0; i--)
             {
-               if (Team == naam)
+               if (Team[i].Naam == naam)
                 {
                     // temp.Add(temp);
-                    resultaatteam = ...;
+                    resultaatteam = Team[i];
                 }
 
             } 

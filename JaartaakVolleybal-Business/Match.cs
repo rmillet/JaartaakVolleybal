@@ -64,9 +64,9 @@ namespace JaartaakVolleybal_Business
 
         public void voegSetToe(Set sets)
         {
-            if (_gameOver = false)
+            if (_gameOver == false)
             {
-                if (sets.setPuntenHome > sets.setPuntenBezoekers)
+                if (sets.PuntenHome > sets.PuntenBezoek)
                 {
                     _teamHome.GewonnenSets++;
                     _teamBezoek.VerlorenSets++;
@@ -82,9 +82,18 @@ namespace JaartaakVolleybal_Business
                     _gewonnenSetsB++;
                 }
             }
+            checkWinner();
 
+            if (_gameOver == true)
+            { 
+            // mogelijkheid voorzien om de eigenschap "punten " van elk team aan te passen
+            // moet je in klasse team een eigenschap "punten" toevoegen
+            // set win je als je 25 punten hebt met 2 punten verschil
+            //Als je match met 3-0 of 3-1 wint krijg je 3 punten , Als je met 3-2 wint dan krijg je 2 punten
+            // als je match verliest met 0-3 of 1-3 dan krijg je 0 punten als je verliest met 2-3 krijg je 1 punt{
 
-        }
+             }
+    }
 
         //hulpprocedure om te controleren of de match voorbij is. Wordt aangeroepen na het toevoegen van een set
         private void checkWinner()

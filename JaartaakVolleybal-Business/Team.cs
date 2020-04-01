@@ -15,6 +15,7 @@ namespace JaartaakVolleybal_Business
         private int _gewonnenSets; // aantal sets team heeft gewonnen
         private int _verlorenSets; // aantal sets team heeft verloren
         private int _aantalSets; // aantal gespeelde sets 
+        private int punten;// het aantal punten van een team
 
         public Team(string naam)
         {
@@ -76,12 +77,16 @@ namespace JaartaakVolleybal_Business
             set { _aantalSets = value; } // je moet het aantal sets kunnen aanpassen
             //Glenn
         }
+
+        // eigenschap punten toevoegen
+
+        
+        //dit mag dan weg
+
         public int berekenPunten()
         {   // ik denk dat we zoiets moeten doen Match gewonnen als je 3 sets wint.
-            // set win je als je 25 punten hebt met 2 punten verschil
-            //Als je match met 3-0 of 3-1 wint krijg je 3 punten , Als je met 3-2 wint dan krijg je 2 punten
-            // als je match verliest met 0-3 of 1-3 dan krijg je 0 punten als je verliest met 2-3 krijg je 1 punt
-            int totaal = _gewonnenSets-_matchGewonnen;
+           
+            int totaal = 0;// _gewonnenSets-_matchGewonnen; dit klopt niet
 
             return totaal; 
         }

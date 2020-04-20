@@ -26,9 +26,11 @@ namespace JaartaakVolleybal_Business
             get { return _teams; }
         }
 
-        public void voegTeamToe(Team team)
+        //het toevoegen van een team aan een competitie geebuert op basis van de naam van de ploeg
+        public void voegTeamToe(String naamTeam)
         {
-            _teams.Add(team);
+            Team temp = new Team(naamTeam);
+            _teams.Add(temp);
         }
 
         public void voegMatchToe(Match match) // je voegt 1 match toe aan een lijst matchen
@@ -36,23 +38,18 @@ namespace JaartaakVolleybal_Business
             _matchen.Add(match);
         }
 
-        // dit heb je niet nodig
-        /*public void vraagMatchOp(Team teams)
-        {
-            _team.Add(teams);
-        }*/
-
-        public Team vraagTeamOp (string naam) // je vraagt een team op basis van de naam
+        
+        public Team vraagTeamOp (string naamTeam) // je vraagt een team op basis van de naam
         {
            Team resultaatteam = null;
             
             // dus dit is niet correct... 
-            //je moet dus op zoak gaan nar het team met de naam 
+            //je moet dus op zoek gaan naer het team met de naam 
             // die je hebt megegeven als parameter
             //
             for (int i = _teams.Count - 1; i >= 0; i--)
             {
-               if (Team[i].Naam == naam)
+               if (Team[i].Naam == naamTeam)
                 {
                     // temp.Add(temp);
                     resultaatteam = Team[i];

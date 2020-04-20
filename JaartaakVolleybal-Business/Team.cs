@@ -79,22 +79,12 @@ namespace JaartaakVolleybal_Business
         }
 
         // eigenschap punten toevoegen
-        public int puntenToevoegen
+        //Als het een eigenschap is dan Punten
+        public int Punten
         {
             get { return punten; }
             set { punten = value; }
-        }
-
-        
-        
-
-        public int berekenPunten()
-        {   // ik denk dat we zoiets moeten doen Match gewonnen als je 3 sets wint.
-           
-            int totaal = 0;// _gewonnenSets-_matchGewonnen; dit klopt niet
-
-            return totaal; 
-        }
+        }                    
         
         //override van ToString
 

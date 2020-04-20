@@ -35,10 +35,7 @@ namespace JaartaakVolleybal_Business
         public void voegPuntenBezoekToe(int punten)
         {
             _puntenBezoek = punten;
-        }
-
-        // de methode wisselScore() hoef je niet te doen. 
-
+        } 
     }
 }
 

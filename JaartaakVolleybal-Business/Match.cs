@@ -9,8 +9,7 @@ namespace JaartaakVolleybal_Business
      public class Match
     {
         private Team _teamHome; // het team dat thuis speelt
-        private Team _teamBezoek; // het team dat op  bezoek speelt
-        private List<Set> _score; // hoe de punten staan, lijst van sets per match
+        private Team _teamBezoek; // het team dat op  bezoek speelt        
         private int _gewonnenSetsH; // hoeveel sets team h heeft gewonnen
         private int _gewonnenSetsB; // hoeveel sets team B heeft gewonnen
         private bool _gameOver; // zal je nodig hebben om te bepalen of ene match gespeeld is
@@ -19,7 +18,6 @@ namespace JaartaakVolleybal_Business
         {
             _teamHome = teamHome;
             _teamBezoek = teamBezoek;
-            _score = new List<Set>();
             _gewonnenSetsB = 0;
             _gewonnenSetsH = 0;
             _gameOver = false;
@@ -35,12 +33,7 @@ namespace JaartaakVolleybal_Business
             get { return _teamBezoek; }
             set { _teamBezoek = value; }
         }
-
-        public List<Set> Score
-        {
-            get { return _score; }
-        }
-
+       
         public int GewonnenSetsB
         {
             get { return _gewonnenSetsB; }
@@ -56,10 +49,7 @@ namespace JaartaakVolleybal_Business
         public void voegTeamsToe(Team teamHome, Team teamBezoek)
         {
             _teamHome = teamHome;
-            _teamBezoek = teamBezoek;
-            _teamHome.AantalMatchen ++; //als er een match wordt toegevoegd -> aantalM +1
-            _teamBezoek.AantalMatchen++;
-
+            _teamBezoek = teamBezoek; 
         }
 
         public void voegSetToe(Set sets)
@@ -70,33 +60,20 @@ namespace JaartaakVolleybal_Business
                 {
                     _teamHome.GewonnenSets++;
                     _teamBezoek.VerlorenSets++;
-
                     _gewonnenSetsH++;
                 }
                 else
                 {
                     _teamHome.VerlorenSets++;
                     _teamBezoek.GewonnenSets++;
-
-
                     _gewonnenSetsB++;
                 }
             }
-            checkWinner();
-
-            if (_gameOver == true)
-            { 
-            // mogelijkheid voorzien om de eigenschap "punten " van elk team aan te passen
-            // moet je in klasse team een eigenschap "punten" toevoegen
-            // set win je als je 25 punten hebt met 2 punten verschil
-            //Als je match met 3-0 of 3-1 wint krijg je 3 punten , Als je met 3-2 wint dan krijg je 2 punten
-            // als je match verliest met 0-3 of 1-3 dan krijg je 0 punten als je verliest met 2-3 krijg je 1 punt{
-
-             }
-    }
+            checkWinnerEnBepaalPunten();
+        }
 
         //hulpprocedure om te controleren of de match voorbij is. Wordt aangeroepen na het toevoegen van een set
-        private void checkWinner()
+        private void checkWinnerEnBepaalPunten()
         {
             if (_gewonnenSetsH == 3)
             {
@@ -105,8 +82,7 @@ namespace JaartaakVolleybal_Business
                 _gameOver = true; //dit betekent dat de match gespeeld is en dit dus de definitieve resultaten zijn.
                 _teamHome.AantalMatchen++;
                 _teamBezoek.AantalMatchen++;
-            }
-            
+            }            
             if (_gewonnenSetsB == 3)
             {
                 _teamHome.MatchVerloren++;
@@ -115,9 +91,36 @@ namespace JaartaakVolleybal_Business
                 _teamHome.AantalMatchen++;
                 _teamBezoek.AantalMatchen++;
             }
+            
+            // mogelijkheid voorzien om de eigenschap "punten " van elk team aan te passen
+            // moet je in klasse team een eigenschap "punten" toevoegen
+            //Als je match met 3-0 of 3-1 wint krijg je 3 punten , Als je met 3-2 wint dan krijg je 2 punten
+            // als je match verliest met 0-3 of 1-3 dan krijg je 0 punten als je verliest met 2-3 krijg je 1 punt
 
+            if (_gewonnenSetsH==3 && (_gewonnenSetsB==0 || _gewonnenSetsB==1))
+            {
+                _teamHome.Punten = _teamHome.Punten + 3;
+                _teamBezoek.Punten = _teamBezoek.Punten + 0;
+            }
+
+            if (_gewonnenSetsB == 3 && (_gewonnenSetsH == 0 || _gewonnenSetsH == 1))
+            {
+                _teamHome.Punten = _teamHome.Punten + 0;
+                _teamBezoek.Punten = _teamBezoek.Punten + 3;
+            }
+
+            if (_gewonnenSetsH == 3 && _gewonnenSetsB == 2)
+            {
+                _teamHome.Punten = _teamHome.Punten + 2;
+                _teamBezoek.Punten = _teamBezoek.Punten + 1;
+            }
+
+            if (_gewonnenSetsB == 3 && _gewonnenSetsH == 2)
+            {
+                _teamHome.Punten = _teamHome.Punten + 1;
+                _teamBezoek.Punten = _teamBezoek.Punten + 2;
+            }        
         }
-
-     }
+    }
 }
 

@@ -14,7 +14,7 @@ namespace JaartaakVolleybal_Forms
     public partial class frmVolleybalCompetitie : Form
     {
         private Competitie _volleybalcompetitietje;
-        private string team, match;
+        private string _team, _match;
         /// <summary>
         /// constructor voor  klasse frm VolleybalCompetitie
         /// </summary>
@@ -22,7 +22,8 @@ namespace JaartaakVolleybal_Forms
         public frmVolleybalCompetitie( Competitie Volleybalcompetitietje)
         {
             InitializeComponent();
-            txtTeam.Text = Volleybalcompetitietje.Team;
+            textTeam.Text = Volleybalcompetitietje.Team;
+           
 
         }
 
@@ -31,9 +32,9 @@ namespace JaartaakVolleybal_Forms
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void voegTeamToe(Team teampje)
         {
-
+            
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

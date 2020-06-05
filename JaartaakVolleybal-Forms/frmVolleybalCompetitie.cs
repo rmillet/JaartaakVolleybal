@@ -19,11 +19,12 @@ namespace JaartaakVolleybal_Forms
         /// constructor voor  klasse frm VolleybalCompetitie
         /// </summary>
         /// <param name="volleybalcompetitietjes"> een object van de klasse competitie</param>
-        public frmVolleybalCompetitie( Competitie Volleybalcompetitietje)
+        public frmVolleybalCompetitie( )
         {
             InitializeComponent();
-            textTeam.Text = Volleybalcompetitietje.Team;
-           
+            _volleybalcompetitietje = new Competitie();
+            
+
 
         }
 
@@ -32,14 +33,70 @@ namespace JaartaakVolleybal_Forms
 
         }
 
-        private void voegTeamToe(Team teampje)
+        private void btnTeamToevoegen_Click(object sender, EventArgs e)
         {
-            
+            string t = textTeam.Text;
+            _volleybalcompetitietje.voegTeamToe(t);
+
+
+            textTeam.Focus();
+            textTeam.Clear();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void btnstart_Click(object sender, EventArgs e)
         {
-
+            comboboxteam1.DataSource = null;
+            comboboxteam1.DataSource = _volleybalcompetitietje.Team;
+            comboboxteam2.DataSource = null;
+            comboboxteam2.BindingContext = new BindingContext();
+            comboboxteam2.DataSource = _volleybalcompetitietje.Team;
+            panel2.Visible = true;
+            panel1.Visible = false;
         }
+
+        private void btnMatchToevoegen_Click(object sender, EventArgs e)
+        {
+           
+            string H = comboboxteam1.SelectedItem.ToString();
+            string W = comboboxteam2.SelectedItem.ToString();
+            Team teamH = _volleybalcompetitietje.vraagTeamOp(H);
+            Team teamW = _volleybalcompetitietje.vraagTeamOp(W);
+            Match matchje = new Match(teamH, teamW);
+            _volleybalcompetitietje.voegMatchToe(matchje);
+            comboboxteam1.Enabled = false;
+            comboboxteam2.Enabled = false;
+            btnMatchToevoegen.Enabled = false;
+            panel3.Visible = true;
+        }
+
+        private int huidignummer = 0;
+
+        private void byncopetitieoverzicht_Click(object sender, EventArgs e)
+        {
+            Frmcompetitieoverzicht f = new Frmcompetitieoverzicht(_volleybalcompetitietje);
+            f.Show();
+        }
+
+        private void btnSetToevoegen_Click(object sender, EventArgs e)
+        {
+            int H = Convert.ToInt16(txtH.Text);
+            int W = Convert.ToInt16(txtW.Text);
+            Set setje = new Set(H, W);
+            _volleybalcompetitietje.Match[huidignummer].voegSetToe(setje);
+
+            if (_volleybalcompetitietje.Match[huidignummer].GameOver == true)
+            {
+                huidignummer++;
+                comboboxteam1.Enabled = true;
+                comboboxteam2.Enabled = true;
+                btnMatchToevoegen.Enabled = true;
+                panel3.Visible = false;
+            }
+            txtH.Clear();
+            txtW.Clear();
+            txtH.Focus();
+        }
+
+        
     }
 }

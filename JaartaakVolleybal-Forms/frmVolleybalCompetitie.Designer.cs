@@ -28,19 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnstart = new System.Windows.Forms.Button();
+            this.btnTeamToevoegen = new System.Windows.Forms.Button();
             this.textTeam = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnMatchToevoegen = new System.Windows.Forms.Button();
             this.comboboxteam2 = new System.Windows.Forms.ComboBox();
             this.comboboxteam1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.textpunten2 = new System.Windows.Forms.TextBox();
+            this.byncopetitieoverzicht = new System.Windows.Forms.Button();
+            this.btnSetToevoegen = new System.Windows.Forms.Button();
+            this.txtW = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textpunten1 = new System.Windows.Forms.TextBox();
+            this.txtH = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -50,25 +49,25 @@
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button2
+            // btnstart
             // 
-            this.button2.Location = new System.Drawing.Point(218, 77);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(118, 23);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Start";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnstart.Location = new System.Drawing.Point(218, 77);
+            this.btnstart.Name = "btnstart";
+            this.btnstart.Size = new System.Drawing.Size(118, 23);
+            this.btnstart.TabIndex = 5;
+            this.btnstart.Text = "Start";
+            this.btnstart.UseVisualStyleBackColor = true;
+            this.btnstart.Click += new System.EventHandler(this.btnstart_Click);
             // 
-            // button1
+            // btnTeamToevoegen
             // 
-            this.button1.Location = new System.Drawing.Point(218, 22);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(118, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Team Toevoegen";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnTeamToevoegen.Location = new System.Drawing.Point(218, 22);
+            this.btnTeamToevoegen.Name = "btnTeamToevoegen";
+            this.btnTeamToevoegen.Size = new System.Drawing.Size(118, 23);
+            this.btnTeamToevoegen.TabIndex = 4;
+            this.btnTeamToevoegen.Text = "Team Toevoegen";
+            this.btnTeamToevoegen.UseVisualStyleBackColor = true;
+            this.btnTeamToevoegen.Click += new System.EventHandler(this.btnTeamToevoegen_Click);
             // 
             // textTeam
             // 
@@ -77,24 +76,15 @@
             this.textTeam.Size = new System.Drawing.Size(100, 20);
             this.textTeam.TabIndex = 3;
             // 
-            // button3
+            // btnMatchToevoegen
             // 
-            this.button3.Location = new System.Drawing.Point(209, 110);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(117, 23);
-            this.button3.TabIndex = 10;
-            this.button3.Text = "Competitie overzicht";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(221, 13);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(105, 23);
-            this.button4.TabIndex = 9;
-            this.button4.Text = "Match toevoegen";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnMatchToevoegen.Location = new System.Drawing.Point(221, 13);
+            this.btnMatchToevoegen.Name = "btnMatchToevoegen";
+            this.btnMatchToevoegen.Size = new System.Drawing.Size(105, 23);
+            this.btnMatchToevoegen.TabIndex = 9;
+            this.btnMatchToevoegen.Text = "Match toevoegen";
+            this.btnMatchToevoegen.UseVisualStyleBackColor = true;
+            this.btnMatchToevoegen.Click += new System.EventHandler(this.btnMatchToevoegen_Click);
             // 
             // comboboxteam2
             // 
@@ -121,30 +111,32 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "TEGEN";
             // 
-            // button5
+            // byncopetitieoverzicht
             // 
-            this.button5.Location = new System.Drawing.Point(208, 106);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(133, 23);
-            this.button5.TabIndex = 16;
-            this.button5.Text = "Competitie overzicht";
-            this.button5.UseVisualStyleBackColor = true;
+            this.byncopetitieoverzicht.Location = new System.Drawing.Point(242, 552);
+            this.byncopetitieoverzicht.Name = "byncopetitieoverzicht";
+            this.byncopetitieoverzicht.Size = new System.Drawing.Size(133, 23);
+            this.byncopetitieoverzicht.TabIndex = 16;
+            this.byncopetitieoverzicht.Text = "Competitie overzicht";
+            this.byncopetitieoverzicht.UseVisualStyleBackColor = true;
+            this.byncopetitieoverzicht.Click += new System.EventHandler(this.byncopetitieoverzicht_Click);
             // 
-            // button6
+            // btnSetToevoegen
             // 
-            this.button6.Location = new System.Drawing.Point(254, 3);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(87, 23);
-            this.button6.TabIndex = 15;
-            this.button6.Text = "Set toevoegen";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnSetToevoegen.Location = new System.Drawing.Point(254, 3);
+            this.btnSetToevoegen.Name = "btnSetToevoegen";
+            this.btnSetToevoegen.Size = new System.Drawing.Size(87, 23);
+            this.btnSetToevoegen.TabIndex = 15;
+            this.btnSetToevoegen.Text = "Set toevoegen";
+            this.btnSetToevoegen.UseVisualStyleBackColor = true;
+            this.btnSetToevoegen.Click += new System.EventHandler(this.btnSetToevoegen_Click);
             // 
-            // textpunten2
+            // txtW
             // 
-            this.textpunten2.Location = new System.Drawing.Point(199, 25);
-            this.textpunten2.Name = "textpunten2";
-            this.textpunten2.Size = new System.Drawing.Size(38, 20);
-            this.textpunten2.TabIndex = 14;
+            this.txtW.Location = new System.Drawing.Point(199, 25);
+            this.txtW.Name = "txtW";
+            this.txtW.Size = new System.Drawing.Size(38, 20);
+            this.txtW.TabIndex = 14;
             // 
             // label2
             // 
@@ -155,12 +147,12 @@
             this.label2.TabIndex = 13;
             this.label2.Text = "-";
             // 
-            // textpunten1
+            // txtH
             // 
-            this.textpunten1.Location = new System.Drawing.Point(82, 25);
-            this.textpunten1.Name = "textpunten1";
-            this.textpunten1.Size = new System.Drawing.Size(34, 20);
-            this.textpunten1.TabIndex = 12;
+            this.txtH.Location = new System.Drawing.Point(82, 25);
+            this.txtH.Name = "txtH";
+            this.txtH.Size = new System.Drawing.Size(34, 20);
+            this.txtH.TabIndex = 12;
             // 
             // label3
             // 
@@ -173,9 +165,9 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnTeamToevoegen);
             this.panel1.Controls.Add(this.textTeam);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.btnstart);
             this.panel1.Location = new System.Drawing.Point(31, 29);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(349, 122);
@@ -183,8 +175,7 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.button3);
+            this.panel2.Controls.Add(this.btnMatchToevoegen);
             this.panel2.Controls.Add(this.comboboxteam1);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.comboboxteam2);
@@ -196,12 +187,11 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.button6);
-            this.panel3.Controls.Add(this.button5);
-            this.panel3.Controls.Add(this.textpunten2);
+            this.panel3.Controls.Add(this.btnSetToevoegen);
+            this.panel3.Controls.Add(this.txtW);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.textpunten1);
+            this.panel3.Controls.Add(this.txtH);
             this.panel3.Location = new System.Drawing.Point(31, 398);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(344, 132);
@@ -214,6 +204,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 733);
             this.Controls.Add(this.panel3);
+            this.Controls.Add(this.byncopetitieoverzicht);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "frmVolleybalCompetitie";
@@ -231,19 +222,18 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnstart;
+        private System.Windows.Forms.Button btnTeamToevoegen;
         private System.Windows.Forms.TextBox textTeam;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnMatchToevoegen;
         private System.Windows.Forms.ComboBox comboboxteam2;
         private System.Windows.Forms.ComboBox comboboxteam1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.TextBox textpunten2;
+        private System.Windows.Forms.Button byncopetitieoverzicht;
+        private System.Windows.Forms.Button btnSetToevoegen;
+        private System.Windows.Forms.TextBox txtW;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textpunten1;
+        private System.Windows.Forms.TextBox txtH;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;

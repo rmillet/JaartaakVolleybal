@@ -44,6 +44,10 @@ namespace JaartaakVolleybal_Business
             get { return _gewonnenSetsH; }
         }
 
+        public bool GameOver
+        {
+            get { return _gameOver; }
+        }
         // als je een match speelt dan ben je met 2 he
 
         public void voegTeamsToe(Team teamHome, Team teamBezoek)

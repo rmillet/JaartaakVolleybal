@@ -14,18 +14,16 @@ namespace JaartaakVolleybal_Forms
     public partial class frmVolleybalCompetitie : Form
     {
         private Competitie _volleybalcompetitietje;
-       
+        private string _team, _match;
         /// <summary>
         /// constructor voor  klasse frm VolleybalCompetitie
         /// </summary>
         /// <param name="volleybalcompetitietjes"> een object van de klasse competitie</param>
-        public frmVolleybalCompetitie()
+        public frmVolleybalCompetitie( Competitie Volleybalcompetitietje)
         {
             InitializeComponent();
-           _volleybalcompetitietje = new Competitie();
-            textTeam = _volleybalcompetitietje.Team.ToString();
-            comboboxteam1 = _volleybalcompetitietje.Match.ToString();
-            comboboxteam2 = _volleybalcompetitietje.Match.ToString();
+            textTeam.Text = Volleybalcompetitietje.Team;
+           
 
         }
 
@@ -34,40 +32,14 @@ namespace JaartaakVolleybal_Forms
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void voegTeamToe(Team teampje)
         {
-
+            
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            string t = textTeam.Text;
-            _volleybalcompetitietje.voegTeamToe(t);
-            /*comboboxteam1.DataSource = null;
-            comboboxteam2.DataSource = null;
-            comboboxteam1.DataSource = _volleybalcompetitietje.Team;
-            comboboxteam2.DataSource = _volleybalcompetitietje.Team;*/
-            comboboxteam1.Items.Add(t);
-            comboboxteam2.Items.Add(t);
-            textTeam.Focus();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            
-            panel2.Visible = true;
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            string l = comboboxteam1.Text;
-            string m = comboboxteam2.Text;
-            _volleybalcompetitietje.voegTeamToe(l, m);
         }
     }
 }

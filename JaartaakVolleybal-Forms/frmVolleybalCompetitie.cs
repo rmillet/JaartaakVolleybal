@@ -22,9 +22,11 @@ namespace JaartaakVolleybal_Forms
         public frmVolleybalCompetitie()
         {
             InitializeComponent();
-            _volleybalcompetitietje = new Competitie();
-     
-            
+           _volleybalcompetitietje = new Competitie();
+            textTeam = _volleybalcompetitietje.Team.ToString();
+            comboboxteam1 = _volleybalcompetitietje.Match.ToString();
+            comboboxteam2 = _volleybalcompetitietje.Match.ToString();
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -44,15 +46,28 @@ namespace JaartaakVolleybal_Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            _volleybalcompetitietje.voegTeamToe(textTeam.Text);
-            textTeam.Focus;
+            string t = textTeam.Text;
+            _volleybalcompetitietje.voegTeamToe(t);
+            /*comboboxteam1.DataSource = null;
+            comboboxteam2.DataSource = null;
+            comboboxteam1.DataSource = _volleybalcompetitietje.Team;
+            comboboxteam2.DataSource = _volleybalcompetitietje.Team;*/
+            comboboxteam1.Items.Add(t);
+            comboboxteam2.Items.Add(t);
+            textTeam.Focus();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-           
+            
             panel2.Visible = true;
         }
-    
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            string l = comboboxteam1.Text;
+            string m = comboboxteam2.Text;
+            _volleybalcompetitietje.voegTeamToe(l, m);
+        }
     }
 }

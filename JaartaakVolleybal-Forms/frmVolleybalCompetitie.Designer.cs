@@ -33,14 +33,14 @@
             this.textTeam = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboboxteam2 = new System.Windows.Forms.ComboBox();
+            this.comboboxteam1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textpunten2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textpunten1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -76,7 +76,6 @@
             this.textTeam.Name = "textTeam";
             this.textTeam.Size = new System.Drawing.Size(100, 20);
             this.textTeam.TabIndex = 3;
-            this.textTeam.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // button3
             // 
@@ -95,22 +94,23 @@
             this.button4.TabIndex = 9;
             this.button4.Text = "Match toevoegen";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // comboBox2
+            // comboboxteam2
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(14, 134);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 8;
+            this.comboboxteam2.FormattingEnabled = true;
+            this.comboboxteam2.Location = new System.Drawing.Point(14, 134);
+            this.comboboxteam2.Name = "comboboxteam2";
+            this.comboboxteam2.Size = new System.Drawing.Size(121, 21);
+            this.comboboxteam2.TabIndex = 8;
             // 
-            // comboBox1
+            // comboboxteam1
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(14, 13);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 7;
+            this.comboboxteam1.FormattingEnabled = true;
+            this.comboboxteam1.Location = new System.Drawing.Point(14, 13);
+            this.comboboxteam1.Name = "comboboxteam1";
+            this.comboboxteam1.Size = new System.Drawing.Size(121, 21);
+            this.comboboxteam1.TabIndex = 7;
             // 
             // label1
             // 
@@ -139,12 +139,12 @@
             this.button6.Text = "Set toevoegen";
             this.button6.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // textpunten2
             // 
-            this.textBox2.Location = new System.Drawing.Point(199, 25);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(38, 20);
-            this.textBox2.TabIndex = 14;
+            this.textpunten2.Location = new System.Drawing.Point(199, 25);
+            this.textpunten2.Name = "textpunten2";
+            this.textpunten2.Size = new System.Drawing.Size(38, 20);
+            this.textpunten2.TabIndex = 14;
             // 
             // label2
             // 
@@ -155,12 +155,12 @@
             this.label2.TabIndex = 13;
             this.label2.Text = "-";
             // 
-            // textBox3
+            // textpunten1
             // 
-            this.textBox3.Location = new System.Drawing.Point(82, 25);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(34, 20);
-            this.textBox3.TabIndex = 12;
+            this.textpunten1.Location = new System.Drawing.Point(82, 25);
+            this.textpunten1.Name = "textpunten1";
+            this.textpunten1.Size = new System.Drawing.Size(34, 20);
+            this.textpunten1.TabIndex = 12;
             // 
             // label3
             // 
@@ -180,15 +180,14 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(349, 122);
             this.panel1.TabIndex = 17;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.comboBox1);
+            this.panel2.Controls.Add(this.comboboxteam1);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.comboBox2);
+            this.panel2.Controls.Add(this.comboboxteam2);
             this.panel2.Location = new System.Drawing.Point(31, 189);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(340, 185);
@@ -199,10 +198,10 @@
             // 
             this.panel3.Controls.Add(this.button6);
             this.panel3.Controls.Add(this.button5);
-            this.panel3.Controls.Add(this.textBox2);
+            this.panel3.Controls.Add(this.textpunten2);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.textBox3);
+            this.panel3.Controls.Add(this.textpunten1);
             this.panel3.Location = new System.Drawing.Point(31, 398);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(344, 132);
@@ -237,14 +236,14 @@
         private System.Windows.Forms.TextBox textTeam;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboboxteam2;
+        private System.Windows.Forms.ComboBox comboboxteam1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textpunten2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textpunten1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;

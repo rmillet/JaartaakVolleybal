@@ -22,6 +22,8 @@ namespace JaartaakVolleybal_Forms
 
         private void Frmcompetitieoverzicht_Load(object sender, EventArgs e)
         {
+            // dit gebruik je om tabellen te maken 
+            // hier maak je een tabel om een overzicht te geven tussen de competities van verschillende ploegen
             grdcompetitietabel.ColumnCount = 8;
             grdcompetitietabel.Columns[0].Name = "ploeg";
             grdcompetitietabel.Columns[1].Name = "aantalMatch";

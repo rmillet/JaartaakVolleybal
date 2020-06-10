@@ -32,7 +32,7 @@ namespace JaartaakVolleybal_Forms
         {
 
         }
-
+        // deze methode zorgt ervoor dat je teams kan toevoegen waarmee je dan een match kan spelen.
         private void btnTeamToevoegen_Click(object sender, EventArgs e)
         {
             string t = textTeam.Text;
@@ -53,7 +53,7 @@ namespace JaartaakVolleybal_Forms
             panel2.Visible = true;
             panel1.Visible = false;
         }
-
+        // met deze voeg je een match toe 
         private void btnMatchToevoegen_Click(object sender, EventArgs e)
         {
            
@@ -77,6 +77,7 @@ namespace JaartaakVolleybal_Forms
             f.Show();
         }
 
+        // met deze methode voeg je set toe aan een match. 
         private void btnSetToevoegen_Click(object sender, EventArgs e)
         {
             int H = Convert.ToInt16(txtH.Text);
